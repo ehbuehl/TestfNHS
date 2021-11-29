@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html>
-<body>
-<p>With the XMLHttpRequest object you can update parts of a web page, without reloading the whole page.</p>
-<p>The XMLHttpRequest object is used to exchange data with a server behind the scenes.</p>
-</body>
-</html>
+<h1>AJAX</h1>
+<p>AJAX is not a programming language.</p>
+<p>AJAX is a technique for accessing web servers from a web page.</p>
+<p>AJAX stands for Asynchronous JavaScript And XML.</p>
