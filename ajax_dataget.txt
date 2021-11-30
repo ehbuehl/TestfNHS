@@ -1,2 +1,2 @@
 <h1>AJAX</h1>
-<p>Elliott Buehl%13dr!3 Present$</p>
+<p>ElliottBuehl%13dr!3 Present$</p>
