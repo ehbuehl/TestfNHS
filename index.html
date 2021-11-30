@@ -3,8 +3,12 @@
 <body>
 
 <div id="demo">
-  <input id="User"></input>
-  <input id="Passkey"></input>
+  <input id="FirstN" placeholder="First Name"></input>
+  <br>
+  <input id="LastN" placeholder="Last Name"></input>
+  <br>
+  <input id="Passkey" placeholder="Passkey"></input>
+<br>
 <button type="button" onclick="loadDoc()">Change Content</button>
 </div>
 
@@ -14,7 +18,7 @@ function loadDoc() {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("demo").innerHTML = 
-      (this.responseText).slice((this.responseText).search(document.getElementById("User").value),(this.responseText).search("#"));
+      (this.responseText).slice((this.responseText).search(document.getElementById("FirstN").value),(this.responseText).search("#"));
     }
   };
   xhttp.open("GET", "ajax_dataget.txt", true);
