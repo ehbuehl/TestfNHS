@@ -14,7 +14,7 @@ function loadDoc() {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("demo").innerHTML =
-      (this.responseText)+"VALUEYEET";
+      (this.responseText).match(/document.getElementById("User").value/gi);
     }
   };
   xhttp.open("GET", "ajax_dataget.txt", true);
