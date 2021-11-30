@@ -2,8 +2,9 @@
 <html>
 <body>
 
-<div id="demo">
-<h1>The XMLHttpRequest Object</h1>
+<div id="GetArea">
+  <input id="Na" placeholder="Name"></input>
+  <input id="Pa" placeholder="Password"></input>
 <button type="button" onclick="loadDoc()">Change Content</button>
 </div>
 
@@ -12,7 +13,7 @@ function loadDoc() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML =
+      document.getElementById("GetArea").innerHTML =
       this.responseText;
     }
   };
