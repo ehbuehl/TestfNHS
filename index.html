@@ -17,9 +17,11 @@ function loadDoc() {
       this.responseText;
     }
   };
-  (xhttp.open("GET", "ajax_dataget.txt", true)).match(/Elliott/gi);
+  xhttp.open("GET", "ajax_dataget.txt", true);
   xhttp.send();
+  document.getElementById("demo").innerHTML = (document.getElementById("demo").value+"YEET")
 }
+  
 </script>
 
 </body>
