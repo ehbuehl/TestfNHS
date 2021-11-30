@@ -1,4 +1,4 @@
 <h1>AJAX</h1>
-<p>Elliott#Buehl%13dr~Present3@Absent0$</p>
-<p>Alex#Rody%2rtd~Present1@Absent2$</p>
-<p>Emery#Carter%8yrt~Present2@Absent1$</p>
+<p>Elliott#Buehl%13dr~Presentß3@Absentþ0$</p>
+<p>Alex#Rody%2rtd~Presentß1@Absentþ2$</p>
+<p>Emery#Carter%8yrt~Presentß2@Absentþ1$</p>
