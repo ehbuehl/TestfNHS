@@ -3,7 +3,8 @@
 <body>
 
 <div id="demo">
-<h1>The XMLHttpRequest Object</h1>
+  <input id="User"></input>
+  <input id="Passkey"></input>
 <button type="button" onclick="loadDoc()">Change Content</button>
 </div>
 
@@ -16,7 +17,7 @@ function loadDoc() {
       this.responseText;
     }
   };
-  xhttp.open("GET", "ajax_dataget.txt", true);
+  (xhttp.open("GET", "ajax_dataget.txt", true)).match(/Elliott/gi);
   xhttp.send();
 }
 </script>
