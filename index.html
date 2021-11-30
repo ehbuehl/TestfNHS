@@ -11,15 +11,14 @@
 <script>
 function loadDoc() {
   var xhttp = new XMLHttpRequest();
-  var result =;
   xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("GetArea").innerHTML =
-       xhttp.open("GET", "ajax_dataget.txt", true);
+  if (this.readyState == 4 && this.status == 200) {
+  document.getElementById("GetArea").innerHTML =
+  (xhttp.open("GET", "ajax_dataget.txt", true);
   xhttp.send();
-    }
+  Sort())
+  }
   };
-
 </script>
 
 </body>
