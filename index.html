@@ -19,7 +19,7 @@ function loadDoc() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("demo").innerHTML = 
       "User = " + (this.responseText).slice((this.responseText).search(document.getElementById("LastN").value),(this.responseText).search("%")) + "," +
-      (this.responseText).slice((this.responseText).search(document.getElementById("LastN").value),(this.responseText).search("#"));
+      (this.responseText).slice((this.responseText).search(document.getElementById("FirstN").value),(this.responseText).search("#"));
     }
   };
   xhttp.open("GET", "ajax_dataget.txt", true);
