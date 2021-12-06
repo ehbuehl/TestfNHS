@@ -14,7 +14,7 @@
 <li><a href="index.html">Log Out</a></li>
 </ul>
 <div class="vl"></div>
-
+    <div id="demo"></div>
 
 
 <script>
@@ -39,6 +39,8 @@ function getP() {
     if (this.readyState == 4 && this.status == 200) {
       passresult = this.responseText
       passC()
+      var prof = document.cookie
+      document.getElementById("demo").innerHTML = "User: " + prof.slice(prof.search("#")+1,prof.search("%")) + ", " + prof.slice(prof.search("&")+1,prof.search("#")) + "<br>" + "Number of Meetings Present: " + prof.slice(prof.search("Present")+8,prof.search("@"))+ "<br>" + "Number of Meetings Absent: " + prof.slice(prof.search("Absent")+7,prof.search("$")-1)
     }
   };
   xhttp.open("GET", "ajax_passget.txt", true);
@@ -50,6 +52,8 @@ if(!((document.cookie).includes("Logincon=True"))){
 window.location.replace("index.html");;
 }
 }
+  
+  
 
 </script>
 
