@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <title>EHS NHS Portal</title>
-  <body>
+  <body onload="checkCookie()">
   <h2 id="LUI">Edgewood High School National Honor Society Portal</h2>
     
 <link rel="stylesheet" href="style.css">
@@ -29,6 +29,7 @@
 <script>
 var result = 0;
 var passresult = 0;
+var x = document.cookie
 
 function loadDoc() {
   var xhttp = new XMLHttpRequest();
@@ -60,8 +61,14 @@ function getP() {
      var prof = result.slice(result.lastIndexOf("&",result.search(document.getElementById("Passkey").value)),result.indexOf("$",result.search(document.getElementById("Passkey").value)))+"$"
         if ((document.getElementById("FirstN").value)!="" && (document.getElementById("LastN").value)!=""){
          if (prof.includes(document.getElementById("FirstN").value) && prof.includes(document.getElementById("LastN").value)){
-     document.getElementById("demo").innerHTML = "User: " + prof.slice(prof.search("#")+1,prof.search("%")) + ", " + prof.slice(prof.search("&")+1,prof.search("#")) + "<br>" + "Number of Meetings Present: " + prof.slice(prof.search("Present")+8,prof.search("@"))+ "<br>" + "Number of Meetings Absent: " + prof.slice(prof.search("Absent")+7,prof.search("$")-1)
+          x = "Logincon=True";
+          window.location.replace("attend.html");
      }}}}}
+  
+function checkCookie(){
+if (x.includes("Logincon=True")){
+window.location.replace("attend.html");
+}}
 
 </script>
 
