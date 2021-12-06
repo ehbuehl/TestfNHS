@@ -57,6 +57,7 @@ function getP() {
         if ((document.getElementById("FirstN").value)!="" && (document.getElementById("LastN").value)!=""){
          if (prof.includes(document.getElementById("Passkey").value) && prof.includes(document.getElementById("FirstN").value) && prof.includes(document.getElementById("LastN").value)){
           document.cookie = "Logincon=True";
+          document.cookie = "Information="+prof;
           window.location.replace("home.html");
      }}}}}
   
