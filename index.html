@@ -61,7 +61,7 @@ function getP() {
      var prof = result.slice(result.lastIndexOf("&",result.search(document.getElementById("Passkey").value)),result.indexOf("$",result.search(document.getElementById("Passkey").value)))+"$"
         if ((document.getElementById("FirstN").value)!="" && (document.getElementById("LastN").value)!=""){
          if (prof.includes(document.getElementById("FirstN").value) && prof.includes(document.getElementById("LastN").value)){
-          x = "Logincon=True";
+          document.cookie = "Logincon=True";
           window.location.replace("attend.html");
      }}}}}
   
