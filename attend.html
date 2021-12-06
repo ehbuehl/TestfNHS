@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <title>EHS NHS Portal</title>
-  <body>
+  <body onload="onloadcheck()">
   <h2 id="LUI">Edgewood High School National Honor Society Portal</h2>
 
 <style>
@@ -99,8 +99,8 @@ function getP() {
 }
 
 function onloadcheck(){
-if(((document.cookie).includes("Logincon="True"))=="false"){
-window.location.replace("index.html");
+if(!((document.cookie).includes("Logincon=True"))){
+window.location.replace("index.html");;
 }
 
 </script>
