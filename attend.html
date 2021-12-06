@@ -68,16 +68,7 @@ li a:hover {
 
     <div class="vl"></div>
 
-<div id="demo">
-  <input id="FirstN" placeholder="First Name"></input>
-  <br>
-  <input id="LastN" placeholder="Last Name"></input>
-  <br>
-  <input id="Passkey" placeholder="Passkey"></input>
-<br>
-<br>
-<button type="button" onclick="loadDoc()">Login</button>
-</div>
+
 
 <script>
 var result = 0;
@@ -107,14 +98,10 @@ function getP() {
   xhttp.send();
 }
 
-  function passC(){
-    if ((document.getElementById("Passkey").value)!=""){
-     if ((passresult.includes(document.getElementById("Passkey").value))){
-     var prof = result.slice(result.lastIndexOf("&",result.search(document.getElementById("Passkey").value)),result.indexOf("$",result.search(document.getElementById("Passkey").value)))+"$"
-        if ((document.getElementById("FirstN").value)!="" && (document.getElementById("LastN").value)!=""){
-         if (prof.includes(document.getElementById("FirstN").value) && prof.includes(document.getElementById("LastN").value)){
-     document.getElementById("demo").innerHTML = "User: " + prof.slice(prof.search("#")+1,prof.search("%")) + ", " + prof.slice(prof.search("&")+1,prof.search("#")) + "<br>" + "Number of Meetings Present: " + prof.slice(prof.search("Present")+8,prof.search("@"))+ "<br>" + "Number of Meetings Absent: " + prof.slice(prof.search("Absent")+7,prof.search("$")-1)
-     }}}}}
+function onloadcheck(){
+if(((document.cookie).includes("Logincon="True"))==false){
+window.location.replace("index.html");
+}
 
 </script>
 
