@@ -1,11 +1,69 @@
 <!DOCTYPE html>
 <html>
   <title>EHS NHS Portal</title>
-<body>
-<h2>Edgewood High School</h2>
-<h2>National Honor Society</h2>
-<h2>Portal</h2>
-<link rel="stylesheet" href="styling.css">
+  <body>
+  <h2 id="LUI">Edgewood High School National Honor Society Portal</h2>
+
+<style>
+
+#demo {
+  text-align: center;
+}
+
+ul {
+  left: 10px;
+  top: 100px;
+  width: 25;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 250px;
+  background-color: #f1f1f1;
+  position: fixed;
+}
+
+#LUI {
+  left: 10px;
+  top: -10px;
+  width: 250px;
+  text-align: center;
+  position: fixed
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.currentp {
+  background-color: #4e5046;
+  color: white;;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #b4b4b4;
+  color: white;
+}
+
+.vl {
+  border-left: 300px light grey;
+  height: 1000px;
+}
+</style>
+
+<ul>
+<li><a class="currentp" href="#home">Home</a></li>
+<li><a href="#news">News</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#about">About</a></li>
+</ul>
+
+<div class="vl"></div>
+
 <div id="demo">
   <input id="FirstN" placeholder="First Name"></input>
   <br>
