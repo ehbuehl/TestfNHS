@@ -34,7 +34,7 @@ function loadstats() {
     if (this.readyState == 4 && this.status == 200) {
       result = this.responseText
   var dc = document.cookie
-  var pass = (dc.slice(dc.search("PassK=")+6,dc.indexOf("@",dc.search("PassK="))+1))
+  var pass = dc.slice(dc.search("PassK=")+6,dc.indexOf("~",dc.search("PassK="))+1)
   alert(pass)
   var prof = result.slice(result.lastIndexOf("&",dc.search(pass)),result.indexOf("$",dc.search(pass)))+"$"
   alert(prof)
