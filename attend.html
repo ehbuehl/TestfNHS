@@ -33,7 +33,13 @@ function loadstats() {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       result = this.responseText
-      getP()
+  var dc = document.cookie
+  var pass = dc.slice(dc.search("PassK="),dc.indexOf("@",dc.search("PassK=")))
+  alert(pass)
+  var prof = result.slice(result.lastIndexOf("&",pass),result.indexOf("$",pass))+"$"
+  alert(prof)
+  document.getElementById("demo").innerHTML = "User: " + prof.slice(prof.search("#")+1,prof.search("%")) + ", " + prof.slice(prof.search("&")+1,prof.search("#")) + "<br>" + "Number of Meetings Present: " + prof.slice(prof.search("Present")+8,prof.search("@"))+ "<br>" + "Number of Meetings Absent: " + prof.slice(prof.search("Absent")+7,prof.search("$")-1)
+  getP()
     }
   };
   xhttp.open("GET", "ajax_dataget.txt", true);
@@ -45,21 +51,13 @@ function getP() {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       passresult = this.responseText
-      passC()
     }
   };
   xhttp.open("GET", "ajax_passget.txt", true);
   xhttp.send();
 }
   
-  function passC(){
-  var dc = document.cookie
-  var pass = dc.slice(dc.search("PassK="),dc.indexOf("@",dc.search("PassK=")))
-  alert(pass)
-  var prof = result.slice(result.lastIndexOf("&",pass),result.indexOf("$",pass))+"$"
-  alert(prof)
-  document.getElementById("demo").innerHTML = "User: " + prof.slice(prof.search("#")+1,prof.search("%")) + ", " + prof.slice(prof.search("&")+1,prof.search("#")) + "<br>" + "Number of Meetings Present: " + prof.slice(prof.search("Present")+8,prof.search("@"))+ "<br>" + "Number of Meetings Absent: " + prof.slice(prof.search("Absent")+7,prof.search("$")-1)
-}
+ 
 
 </script>
 
