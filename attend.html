@@ -36,7 +36,7 @@ function loadstats() {
   var dc = document.cookie
   var pass = dc.slice(dc.search("PassK=")+6,dc.indexOf("~",dc.search("PassK="))+1)
   alert(pass)
-  var prof = result.slice(result.lastIndexOf("&",dc.search(pass)),result.indexOf("$",dc.search(pass)))+"$"
+  var prof = dc.slice(dc.lastIndexOf("&",dc.search(pass)),dc.indexOf("$",dc.search(pass)))+"$"
   alert(prof)
   document.getElementById("demo").innerHTML = "User: " + prof.slice(prof.search("#")+1,prof.search("%")) + ", " + prof.slice(prof.search("&")+1,prof.search("#")) + "<br>" + "Number of Meetings Present: " + prof.slice(prof.search("Present")+8,prof.search("@"))+ "<br>" + "Number of Meetings Absent: " + prof.slice(prof.search("Absent")+7,prof.search("$")-1)
   getP()
