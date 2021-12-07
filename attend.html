@@ -34,9 +34,9 @@ function loadstats() {
     if (this.readyState == 4 && this.status == 200) {
       result = this.responseText
   var dc = document.cookie
-  var pass = dc.slice(dc.search("PassK=")+6,dc.indexOf("@",dc.search("PassK=")))
+  var pass = "%"+dc.slice(dc.search("PassK=")+6,dc.indexOf("@",dc.search("PassK="))+1)+"~"
   alert(pass)
-  var prof = result.slice(result.lastIndexOf("&",pass),result.indexOf("$",pass))+"$"
+  var prof = result.slice(result.lastIndexOf("&",dc.search(pass)),result.indexOf("$",dc.search(pass)))+"$"
   alert(prof)
   document.getElementById("demo").innerHTML = "User: " + prof.slice(prof.search("#")+1,prof.search("%")) + ", " + prof.slice(prof.search("&")+1,prof.search("#")) + "<br>" + "Number of Meetings Present: " + prof.slice(prof.search("Present")+8,prof.search("@"))+ "<br>" + "Number of Meetings Absent: " + prof.slice(prof.search("Absent")+7,prof.search("$")-1)
   getP()
@@ -45,18 +45,6 @@ function loadstats() {
   xhttp.open("GET", "ajax_dataget.txt", true);
   xhttp.send();
 }
-
-function getP() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      passresult = this.responseText
-    }
-  };
-  xhttp.open("GET", "ajax_passget.txt", true);
-  xhttp.send();
-}
-  
  
 
 </script>
