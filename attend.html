@@ -53,6 +53,8 @@ function getP() {
 }
   
   function passC(){
+  var dc = document.cookie
+  var pass = dc.slice(dc.lastIndexOf("&",dc.search()),)
   var prof = result.slice(result.lastIndexOf("&",result.search(document.getElementById("Passkey").value)),result.indexOf("$",result.search(document.getElementById("Passkey").value)))+"$"
   document.getElementById("demo").innerHTML = "User: " + prof.slice(prof.search("#")+1,prof.search("%")) + ", " + prof.slice(prof.search("&")+1,prof.search("#")) + "<br>" + "Number of Meetings Present: " + prof.slice(prof.search("Present")+8,prof.search("@"))+ "<br>" + "Number of Meetings Absent: " + prof.slice(prof.search("Absent")+7,prof.search("$")-1)
 }
