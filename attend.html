@@ -26,6 +26,10 @@ function loadDoc() {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       result = this.responseText
+      var prof = document.cookie
+      var proffil = prof.slice(prof.search("&")+1,prof.search("$"))
+      alert(proffil)
+      document.getElementById("demo").innerHTML = "User: " + proffil.slice(proffil.search("#")+1,proffil.search("%")) + ", " + proffil.slice(proffil.search("&")+1,proffil.search("#")) + "<br>" + "Number of Meetings Present: " + proffil.slice(proffil.search("Present")+8,proffil.search("@"))+ "<br>" + "Number of Meetings Absent: " + proffil.slice(proffil.search("Absent")+7,proffil.search("$")-1)
       getP()
     }
   };
@@ -38,9 +42,6 @@ function getP() {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       passresult = this.responseText
-      var prof = document.cookie
-      var proffil = prof.slice(prof.search("&")+1,prof.search("$"))
-      document.getElementById("demo").innerHTML = "User: " + proffil.slice(proffil.search("#")+1,proffil.search("%")) + ", " + proffil.slice(proffil.search("&")+1,proffil.search("#")) + "<br>" + "Number of Meetings Present: " + proffil.slice(proffil.search("Present")+8,proffil.search("@"))+ "<br>" + "Number of Meetings Absent: " + proffil.slice(proffil.search("Absent")+7,proffil.search("$")-1)
     }
   };
   xhttp.open("GET", "ajax_passget.txt", true);
