@@ -5,7 +5,7 @@
 
 ul {
   left: 10px;
-  top: 100px;
+  top: 120px;
   width: 25;
   list-style-type: none;
   margin: 0;
@@ -17,11 +17,24 @@ ul {
 }
 
 #LUI {
-  left: 10px;
+  left: -10px;
   top: -10px;
   width: 250px;
   text-align: center;
   position: fixed
+}
+
+#ULI {
+  left: 10px;
+  top: 100px;
+  width: 25;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 250px;
+  background-color: #f1f1f1;
+  position: fixed;
 }
 
 li a {
