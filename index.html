@@ -26,6 +26,42 @@ var result = 0;
 var passresult = 0;
 var x = document.cookie
 
+function run(){
+var inp = document.getElementById("input").value;
+const tot = [2,4,8,16,32]
+const tota = [0];
+const fingt = [0];
+var total = 0;
+var itotalS1 = 0;
+var itotalS2 = 0;
+var itotalS3 = 0;
+var itotalS4 = 0;
+var itotalSF = 0;
+var gtotalStr = 0;
+var gtotal = 0;
+var grandtotal =0;
+
+for (i=0;i<inp.length;i++){
+total += inp.charCodeAt(i)
+tota[i] = String(inp.charCodeAt(i))
+}
+
+itotalS1 = tota[0].concat("",tota[1])
+itotalS2 = itotalS1.concat("",tota[2])
+itotalS3 = itotalS2.concat("",tota[3])
+itotalS4 = itotalS3.concat("",tota[4])
+itotalSF = parseInt(itotalS4)
+gtotal = itotalSF * total
+gtotalStr = String(gtotal)
+
+for (j=0;j<gtotalStr.length;j++){
+fingt[j] = gtotalStr.charAt((gtotalStr.length)-j-1)
+}
+for (k=0;k<gtotalStr.length;k++){
+grandtotal += (parseInt(fingt[k]))*(Math.pow(2,k))
+}
+}
+
 function loadDoc() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
