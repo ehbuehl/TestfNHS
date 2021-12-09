@@ -45,6 +45,44 @@ function loadstats() {
 }
  
 </script>
+    
+function run(){
+var inp = document.getElementById("input").value;
+var total = 0;
+var total2 = 0;
+var total3 = 0;
+var final = 0;
+var final1 = 0;
+var finalcom = 0;
+var matchm = 0;
+var matchM = 0;
+var yeet = 1;
+
+for (i=0;i<inp.length;i++){
+total += inp.charCodeAt(i)
+total += total^2.5
+}
+for (j=0;j<inp.length;j++){
+if (matchm < inp.charCodeAt(j))
+matchm = inp.charCodeAt(j)
+}
+for (k=0;k<inp.length;k++){
+matchM += inp.charCodeAt(k)
+matchM = Math.trunc(matchM)
+}
+total2 = total + Math.clz32(total)
+total3 = Math.floor((matchM + matchm)/2)
+final = (total3*total2)
+final1 = final
+final = final.toString
+for (q=0;q<final.length;q++){
+yeet = inp.charCodeAt(q)
+yeet1 = yeet*inp.charCodeAt(q)
+}
+finalcom = (final1+yeet)+(final1*yeet)
+alert(finalcom)
+}
+
 
 </body>
 </html>
