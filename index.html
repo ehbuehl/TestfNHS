@@ -41,7 +41,9 @@ var itotalS4 = 0;
 var itotalSF = 0;
 var gtotalStr = 0;
 var gtotal = 0;
-var grandtotal =0;
+var grandtotal = 0;
+var grandtotalS = 0;
+
 
 for (i=0;i<inp.length;i++){
 total += inp.charCodeAt(i)
@@ -70,7 +72,7 @@ fingt[j] = gtotalStr.charAt((gtotalStr.length)-j-1)
 for (k=0;k<gtotalStr.length;k++){
 grandtotal += (parseInt(fingt[k]))*(Math.pow(2,k))
 }
-alert(grandtotal)
+grandtotalS = Math.round(grandtotal*(Math.abs(Math.cos(gtotalStr))))*Math.pow(gtotal,grandtotal/gtotal)+(Math.round(gtotal/Math.sin(grandtotal)))
 loadDoc()
 }
 
