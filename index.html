@@ -18,7 +18,7 @@
   <input id="Passkey" placeholder="Passkey"></input>
 <br>
 <br>
-<button type="button" onclick="loadDoc()">Login</button>
+<button type="button" onclick="run()">Login</button>
 </div>
 
 <script>
@@ -27,7 +27,9 @@ var passresult = 0;
 var x = document.cookie
 
 function run(){
-var inp = document.getElementById("input").value;
+var inp = document.getElementById("Passkey").value;
+var inp1 = document.getElementById("FirstN").value;
+var inp2 = document.getElementById("LastN").value;
 const tot = [2,4,8,16,32]
 const tota = [0];
 const fingt = [0];
@@ -46,6 +48,14 @@ total += inp.charCodeAt(i)
 tota[i] = String(inp.charCodeAt(i))
 }
 
+for (a=0;a<inp1.length;a++){
+total += inp1.charCodeAt(a)
+}
+
+for (b=0;b<inp2.length;b++){
+total += inp2.charCodeAt(b)
+}
+
 itotalS1 = tota[0].concat("",tota[1])
 itotalS2 = itotalS1.concat("",tota[2])
 itotalS3 = itotalS2.concat("",tota[3])
@@ -60,6 +70,8 @@ fingt[j] = gtotalStr.charAt((gtotalStr.length)-j-1)
 for (k=0;k<gtotalStr.length;k++){
 grandtotal += (parseInt(fingt[k]))*(Math.pow(2,k))
 }
+alert(grandtotal)
+loadDoc()
 }
 
 function loadDoc() {
